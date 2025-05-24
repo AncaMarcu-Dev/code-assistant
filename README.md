@@ -38,17 +38,17 @@ cd code-assistant
 ### 2. Install dependencies
 
 ```bash
-npm install
+npm install (for both frontend and backend)
 ```
 
 ---
 
 ### 3. Install Ollama and pull a model
 
-- [Ollama](https://ollama.com/)
+- Download and install [Ollama](https://ollama.com/)
 
 ```bash
-ollama run deepseek-coder:1.3b (you can chose any model you want)
+ollama run deepseek-coder:1.3b (or choose any model you want)
 ```
 
 ---
@@ -59,32 +59,13 @@ ollama run deepseek-coder:1.3b (you can chose any model you want)
 npm run start
 ```
 
-
+---
 ### 6. Ask a question
 
 Ask a question about your code inside the UI 
 
-
-## 📁 Project Structure
+---
+## 📁 🧑‍💻 License
 
 ```
-.
-├── frontend/                   # Angular 19 app
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── app.component.ts
-│   │   │   └── code.service.ts
-│   └── angular.json
-├── src/                        # Node.js + TypeScript backend
-│   ├── llm/
-│   │   ├── ai_model.ts
-│   │   └── ask_questions.ts
-│   └── index.ts
-├── tsconfig.json
-└── package.json
-
----
-
-## 🧑‍💻 License
-
 MIT — use freely and hack away!
