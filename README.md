@@ -1,14 +1,15 @@
-# 🧠 Local Code Assistant (TypeScript + Ollama + ChromaDB)
 
-A personal AI assistant that answers questions about your code using local LLMs, local embeddings, and real vector search — no paid APIs required.
+# 🧠 Local Code Assistant (TypeScript + Ollama + Angular19+) 
+
+A personal AI assistant that answers questions about your code using local LLMs — no paid APIs required.
 
 ---
 
 ## ⚙️ Features
 
 - ✅ Written in TypeScript
-- 🧠 Uses **Ollama** + `nomic-embed-text` for local embeddings
-- 🔍 Uses **ChromaDB** for vector search
+- 🧠 Uses **Ollama**
+- 🔍 Uses **Angular** for frontend
 - 🤖 Designed to run fully offline
 - 🧪 Educational and modular for learning AI dev skills
 
@@ -18,7 +19,7 @@ A personal AI assistant that answers questions about your code using local LLMs,
 
 - [Node.js](https://nodejs.org/) (v18+)
 - [Ollama](https://ollama.com/) (running locally)
-- [Python](https://www.python.org/) + `pip` (for ChromaDB)
+- [Angular CLI](https://github.com/angular/angular-cli)
 - Git / Terminal
 
 ---
@@ -51,28 +52,7 @@ ollama pull nomic-embed-text
 
 ---
 
-### 4. Set up and start ChromaDB
-
-```bash
-pip install chromadb
-chromadb run
-```
-
 This starts a local vector DB at `http://localhost:8000`.
-
----
-
-### 5. Embed code snippets
-
-Edit your `scripts/embed.ts` to include your own code chunks, then run:
-
-```bash
-ts-node scripts/embed.ts
-```
-
-This will:
-- Embed code using `nomic-embed-text`
-- Upload to ChromaDB for later search
 
 ---
 
@@ -97,11 +77,17 @@ npm run start
 
 ```
 .
+├── frontend/
+│   ├── src/
+│   │   ├── app
+|   │   │   |── app.component.ts
+|   │   │   └── code.service.ts
+│   └── index.ts
+|   ```
 ├── src/
 │   ├── rag/
-│   │   ├── getRelevantChunks.ts
-│   │   ├── llm.ts
-│   │   └── qa.ts
+│   │   ├── ai_model.ts
+│   │   └── ask_questions.ts
 │   └── index.ts
 ├── scripts/
 │   └── embed.ts
