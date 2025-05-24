@@ -1,5 +1,5 @@
 import http from 'http';
-import { askQuestion } from './rag/ask_question.js';
+import { askQuestion } from './llm/ask_question.js';
 
 const PORT = 3000;
 
