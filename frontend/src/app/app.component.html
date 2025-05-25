@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Multiline Code Processor</h2>
+
+  <textarea
+    [(ngModel)]="inputText"
+    placeholder="Paste or type your code here...">
+  </textarea>
+
+  <button (click)="generateOutput()" [disabled]="loading">
+    {{ loading ? 'Processing...' : 'Analyze' }}
+  </button>
+
+  <!-- Loading Spinner -->
+  <div class="spinner" *ngIf="loading" aria-label="Loading spinner"></div>
+
+  <h3 *ngIf="outputText && !loading">Output:</h3>
+  <pre *ngIf="outputText && !loading">{{ outputText }}</pre>
+</div>
